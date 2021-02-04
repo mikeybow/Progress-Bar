@@ -19,10 +19,10 @@ body {
     margin: 100px auto; 
 }
 
-  .progressbar {
+  .progress-container {
       counter-reset: step;
   }
-  .progressbar div {
+  .progress-container div {
       list-style-type: none;
       width: 25%;
       float: left;
@@ -32,7 +32,7 @@ body {
       text-transform: uppercase;
       color: #7d7d7d;
   }
-  .progressbar div:before {
+  .progress-container div:before {
       width: 30px;
       height: 30px;
       content: counter(step);
@@ -45,7 +45,7 @@ body {
       border-radius: 50%;
       background-color: white;
   }
-  .progressbar div:after {
+  .progress-container div:after {
       width: 100%;
       height: 2px;
       content: '';
@@ -55,15 +55,15 @@ body {
       left: -50%;
       z-index: -1;
   }
-  .progressbar div:first-child:after {
+  .progress-container div:first-child:after {
       content: none;
   }
-  .progressbar div.active {
+  .progress-container div.active {
       color: green;
   }
-  .progressbar div.active:before {
+  .progress-container div.active:before {
       border-color: #55b776;
   }
-  .progressbar div.active + li:after {
+  .progress-container div.active + li:after {
       background-color: #55b776;
   }
